@@ -14,3 +14,6 @@ def test_add_multiple_numbers():
 
 def test_add_new_lines_between_numbers():
     assert add("1\n2,3") == 6
+
+def test_add_with_different_delimiters():
+    assert add("//;\n1;2") == 3
