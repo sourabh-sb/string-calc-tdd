@@ -17,3 +17,9 @@ def test_add_new_lines_between_numbers():
 
 def test_add_with_different_delimiters():
     assert add("//;\n1;2") == 3
+
+def test_add_negative_numbers():
+    try:
+        add("-1,-2,3,-4")
+    except ValueError as e:
+        assert str(e) == "negative numbers not allowed: -1,-2,-4"
